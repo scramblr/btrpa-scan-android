@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/color_chip_text_color.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/color/chip_text_color.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/layout_item_device.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/layout/item_device.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_launcher_background.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_bluetooth_scan.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_bluetooth_scan.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/xml_file_paths.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/xml/file_paths.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_help.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_help.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/menu_main_menu.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/menu/main_menu.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/layout_activity_main.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/layout_dialog_settings.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/layout/dialog_settings.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_stop.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_stop.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_export.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_export.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_badge_public.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/badge_public.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_ic_settings.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/color_chip_background_color.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/color/chip_background_color.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_badge_rpa.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/badge_rpa.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/drawable_badge_irk_match.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/drawable/badge_irk_match.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-release-37:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "tel.packet.btrpascan.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]

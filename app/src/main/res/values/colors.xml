@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors - packet.tel -->
+    <color name="primary">#1A237E</color>
+    <color name="primary_dark">#0D1442</color>
+    <color name="primary_light">#3949AB</color>
+    <color name="accent">#00E676</color>
+    
+    <!-- Background colors -->
+    <color name="background">#0A0C14</color>
+    <color name="card_background">#12151F</color>
+    <color name="stats_background">#0E1118</color>
+    
+    <!-- Text colors -->
+    <color name="text_primary">#E8EDF3</color>
+    <color name="text_secondary">#8B9BAD</color>
+    <color name="text_hint">#5A6A7A</color>
+    
+    <!-- Status colors -->
+    <color name="rssi_strong">#00E676</color>
+    <color name="rssi_medium">#FFB74D</color>
+    <color name="rssi_weak">#EF5350</color>
+    
+    <!-- Badge colors -->
+    <color name="badge_irk_match">#00E676</color>
+    <color name="badge_rpa">#7C4DFF</color>
+    <color name="badge_public">#546E7A</color>
+    <color name="rpa_color">#7C4DFF</color>
+    
+    <!-- Standard -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

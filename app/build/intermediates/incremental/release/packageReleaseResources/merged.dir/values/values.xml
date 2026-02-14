@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#00E676</color>
+    <color name="background">#0A0C14</color>
+    <color name="badge_irk_match">#00E676</color>
+    <color name="badge_public">#546E7A</color>
+    <color name="badge_rpa">#7C4DFF</color>
+    <color name="black">#000000</color>
+    <color name="card_background">#12151F</color>
+    <color name="primary">#1A237E</color>
+    <color name="primary_dark">#0D1442</color>
+    <color name="primary_light">#3949AB</color>
+    <color name="rpa_color">#7C4DFF</color>
+    <color name="rssi_medium">#FFB74D</color>
+    <color name="rssi_strong">#00E676</color>
+    <color name="rssi_weak">#EF5350</color>
+    <color name="stats_background">#0E1118</color>
+    <color name="text_hint">#5A6A7A</color>
+    <color name="text_primary">#E8EDF3</color>
+    <color name="text_secondary">#8B9BAD</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">BTRPA-Scan</string>
+    <string name="bluetooth_required">Bluetooth is required for scanning</string>
+    <string name="env_free_space">Free Space</string>
+    <string name="env_indoor">Indoor</string>
+    <string name="env_outdoor">Outdoor</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="export_json">Export JSON</string>
+    <string name="mode_discover">Discover All</string>
+    <string name="mode_irk">IRK Resolve</string>
+    <string name="mode_target">Target MAC</string>
+    <string name="no_devices">No devices found</string>
+    <string name="permission_required">Bluetooth permissions required</string>
+    <string name="scanning">Scanning for devices…</string>
+    <string name="settings_active_scan">Active Scanning</string>
+    <string name="settings_active_scan_desc">Send SCAN_REQ to get additional service info</string>
+    <string name="settings_alert_within">Proximity Alert (meters)</string>
+    <string name="settings_environment">Environment</string>
+    <string name="settings_min_rssi">Min RSSI (dBm)</string>
+    <string name="settings_rssi_window">RSSI Averaging Window</string>
+    <string name="settings_timeout">Scan Timeout (seconds)</string>
+    <string name="settings_title">Scan Settings</string>
+    <style name="Theme.BtrpaScan" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        
+        
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        
+        
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        
+        <item name="chipStyle">@style/Widget.BtrpaScan.Chip</item>
+    </style>
+    <style name="Theme.BtrpaScan.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+    <style name="Theme.BtrpaScan.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Dark"/>
+    <style name="Widget.BtrpaScan.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/primary_light</item>
+    </style>
+</resources>

@@ -1,0 +1,203 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="tel.packet.btrpascan"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Bluetooth permissions -->
+12    <uses-permission
+12-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:6:5-7:38
+13        android:name="android.permission.BLUETOOTH"
+13-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:6:22-65
+14        android:maxSdkVersion="30" />
+14-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:7:9-35
+15    <uses-permission
+15-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:8:5-9:38
+16        android:name="android.permission.BLUETOOTH_ADMIN"
+16-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:8:22-71
+17        android:maxSdkVersion="30" />
+17-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:9:9-35
+18
+19    <!-- Android 12+ Bluetooth permissions -->
+20    <uses-permission
+20-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:12:5-14:31
+21        android:name="android.permission.BLUETOOTH_SCAN"
+21-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:12:22-70
+22        android:usesPermissionFlags="neverForLocation" />
+22-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:13:9-55
+23    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+23-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:15:5-76
+23-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:15:22-73
+24
+25    <!-- Location permission (required for BLE scanning on Android < 12) -->
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:18:5-79
+26-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:18:22-76
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+27-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:19:5-81
+27-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:19:22-78
+28
+29    <!-- For background scanning -->
+30    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+30-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:22:5-77
+30-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:22:22-74
+31    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+31-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:23:5-94
+31-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:23:22-91
+32
+33    <!-- Vibration for proximity alerts -->
+34    <uses-permission android:name="android.permission.VIBRATE" />
+34-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:26:5-66
+34-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:26:22-63
+35
+36    <!-- Storage for export -->
+37    <uses-permission
+37-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:29:5-30:38
+38        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+38-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:29:22-78
+39        android:maxSdkVersion="28" />
+39-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:30:9-35
+40
+41    <uses-feature
+41-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:32:5-34:35
+42        android:name="android.hardware.bluetooth_le"
+42-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:33:9-53
+43        android:required="true" />
+43-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:34:9-32
+44
+45    <permission
+45-->[androidx.core:core:1.12.0] C:\Users\user\.gradle\caches\transforms-4\995718abbb597422d1a82bd475f3b7c9\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+46        android:name="tel.packet.btrpascan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+46-->[androidx.core:core:1.12.0] C:\Users\user\.gradle\caches\transforms-4\995718abbb597422d1a82bd475f3b7c9\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+47        android:protectionLevel="signature" />
+47-->[androidx.core:core:1.12.0] C:\Users\user\.gradle\caches\transforms-4\995718abbb597422d1a82bd475f3b7c9\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+48
+49    <uses-permission android:name="tel.packet.btrpascan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+49-->[androidx.core:core:1.12.0] C:\Users\user\.gradle\caches\transforms-4\995718abbb597422d1a82bd475f3b7c9\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+49-->[androidx.core:core:1.12.0] C:\Users\user\.gradle\caches\transforms-4\995718abbb597422d1a82bd475f3b7c9\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+50
+51    <application
+51-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:36:5-64:19
+52        android:allowBackup="true"
+52-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:37:9-35
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.12.0] C:\Users\user\.gradle\caches\transforms-4\995718abbb597422d1a82bd475f3b7c9\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+54        android:extractNativeLibs="false"
+55        android:icon="@mipmap/ic_launcher"
+55-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:38:9-43
+56        android:label="@string/app_name"
+56-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:39:9-41
+57        android:roundIcon="@mipmap/ic_launcher_round"
+57-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:40:9-54
+58        android:supportsRtl="true"
+58-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:41:9-35
+59        android:theme="@style/Theme.BtrpaScan" >
+59-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:42:9-47
+60        <activity
+60-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:44:9-52:20
+61            android:name="tel.packet.btrpascan.MainActivity"
+61-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:45:13-41
+62            android:exported="true"
+62-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:46:13-36
+63            android:theme="@style/Theme.BtrpaScan" >
+63-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:47:13-51
+64            <intent-filter>
+64-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:48:13-51:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:49:17-69
+65-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:49:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:50:17-77
+67-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:50:27-74
+68            </intent-filter>
+69        </activity>
+70
+71        <provider
+72            android:name="androidx.core.content.FileProvider"
+72-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:55:13-62
+73            android:authorities="tel.packet.btrpascan.fileprovider"
+73-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:56:13-64
+74            android:exported="false"
+74-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:57:13-37
+75            android:grantUriPermissions="true" >
+75-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:58:13-47
+76            <meta-data
+76-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:59:13-61:54
+77                android:name="android.support.FILE_PROVIDER_PATHS"
+77-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:60:17-67
+78                android:resource="@xml/file_paths" />
+78-->H:\Projects\BLUETOOTH\github\PACKET.TEL\btrpa-scan-android\btrpa-scan-android\app\src\main\AndroidManifest.xml:61:17-51
+79        </provider>
+80        <provider
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+81            android:name="androidx.startup.InitializationProvider"
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+82            android:authorities="tel.packet.btrpascan.androidx-startup"
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+83            android:exported="false" >
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+84            <meta-data
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+86                android:value="androidx.startup" />
+86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\user\.gradle\caches\transforms-4\221113ede4d9cb67e764546363f751b4\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\user\.gradle\caches\transforms-4\6ec8f94750e246d84339058b7a08b84d\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+88-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\user\.gradle\caches\transforms-4\6ec8f94750e246d84339058b7a08b84d\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+89                android:value="androidx.startup" />
+89-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\user\.gradle\caches\transforms-4\6ec8f94750e246d84339058b7a08b84d\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+92                android:value="androidx.startup" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+93        </provider>
+94
+95        <receiver
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+96            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+97            android:directBootAware="false"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+98            android:enabled="true"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+99            android:exported="true"
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+100            android:permission="android.permission.DUMP" >
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+102                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+105                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+108                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+111                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\user\.gradle\caches\transforms-4\06607bea83863d2b0ec18388123671aa\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+112            </intent-filter>
+113        </receiver>
+114    </application>
+115
+116</manifest>

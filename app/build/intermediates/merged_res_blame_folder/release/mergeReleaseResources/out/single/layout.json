@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "tel.packet.btrpascan.app-mergeReleaseResources-36:/layout/item_device.xml",
+        "source": "tel.packet.btrpascan.app-main-38:/layout/item_device.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-mergeReleaseResources-36:/layout/dialog_settings.xml",
+        "source": "tel.packet.btrpascan.app-main-38:/layout/dialog_settings.xml"
+    },
+    {
+        "merged": "tel.packet.btrpascan.app-mergeReleaseResources-36:/layout/activity_main.xml",
+        "source": "tel.packet.btrpascan.app-main-38:/layout/activity_main.xml"
+    }
+]
