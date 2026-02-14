@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BTRPA-Scan</string>
+    
+    <!-- Scan modes -->
+    <string name="mode_discover">Discover All</string>
+    <string name="mode_target">Target MAC</string>
+    <string name="mode_irk">IRK Resolve</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Scan Settings</string>
+    <string name="settings_active_scan">Active Scanning</string>
+    <string name="settings_active_scan_desc">Send SCAN_REQ to get additional service info</string>
+    <string name="settings_min_rssi">Min RSSI (dBm)</string>
+    <string name="settings_rssi_window">RSSI Averaging Window</string>
+    <string name="settings_alert_within">Proximity Alert (meters)</string>
+    <string name="settings_timeout">Scan Timeout (seconds)</string>
+    <string name="settings_environment">Environment</string>
+    
+    <!-- Environment options -->
+    <string name="env_free_space">Free Space</string>
+    <string name="env_outdoor">Outdoor</string>
+    <string name="env_indoor">Indoor</string>
+    
+    <!-- Export -->
+    <string name="export_csv">Export CSV</string>
+    <string name="export_json">Export JSON</string>
+    
+    <!-- Messages -->
+    <string name="scanning">Scanning for devices…</string>
+    <string name="no_devices">No devices found</string>
+    <string name="bluetooth_required">Bluetooth is required for scanning</string>
+    <string name="permission_required">Bluetooth permissions required</string>
+</resources>

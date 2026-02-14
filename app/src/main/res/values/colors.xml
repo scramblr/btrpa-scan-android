@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="primary">#1E3A5F</color>
+    <color name="primary_dark">#0D2137</color>
+    <color name="primary_light">#2E5A8F</color>
+    <color name="accent">#00D4AA</color>
+    
+    <!-- Background colors -->
+    <color name="background">#0A0E14</color>
+    <color name="card_background">#141A22</color>
+    <color name="stats_background">#0F1419</color>
+    
+    <!-- Text colors -->
+    <color name="text_primary">#E8EDF3</color>
+    <color name="text_secondary">#8B9BAD</color>
+    <color name="text_hint">#5A6A7A</color>
+    
+    <!-- Status colors -->
+    <color name="rssi_strong">#00D4AA</color>
+    <color name="rssi_medium">#FFB74D</color>
+    <color name="rssi_weak">#EF5350</color>
+    
+    <!-- Badge colors -->
+    <color name="badge_irk_match">#00D4AA</color>
+    <color name="badge_rpa">#5A6A7A</color>
+    
+    <!-- Standard -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

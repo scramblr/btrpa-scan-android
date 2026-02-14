@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_export"
+        android:icon="@drawable/ic_export"
+        android:title="Export"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/action_export_csv"
+                android:title="Export as CSV" />
+
+            <item
+                android:id="@+id/action_export_json"
+                android:title="Export as JSON" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/action_clear"
+        android:title="Clear Results"
+        app:showAsAction="never" />
+
+</menu>
