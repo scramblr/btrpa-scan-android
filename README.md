@@ -1,22 +1,17 @@
-# BTRPA-SCAN-ANDROID - A Bluetooth BLE Scanner that can hunt devices, including ones that constantly change MAC addresses, because being evil is fun!
+# BTRPA-SCAN-ANDROID - A Bluetooth BLE Scanner that can find devices that change MAC addresses 😈
 
-An Android Port of @HackingDave's Bluetooth Low Energy (BLE) Scanner With Resolvable Private Address (RPA) Resolution Using Identity Resolving Keys (IRKs)
-Original version found here: [https://github.com/HackingDave/btrpa-scan](https://github.com/HackingDave/btrpa-scan)
-
-## Complete Beginner's Guide
-
-A Bluetooth Low Energy (BLE) scanner app that can find nearby Bluetooth devices and resolve "hidden" device addresses using cryptographic keys. It can also cook dinner.
-
+#### This is an Android Port of [@HackingDave's](https://x.com/HackingDave) Bluetooth Low Energy (BLE) Scanner with Resolvable Private Address (RPA) Resolution using Identity Resolving Keys (IRKs) in order to track those silly devices that think changing a MAC address will save them from being tracked. ####
+#### The original version can be found here: [https://github.com/HackingDave/btrpa-scan](https://github.com/HackingDave/btrpa-scan) ####
 ---
 
-## What Does This App Do?
+## Hey! Here's The Deal, From the GROUND TO THE SKY! ##
 
-This app is an Android version of the [btrpa-scan](https://github.com/hackingdave/btrpa-scan) Python tool. It SHOULD:
+This app is an **Android version** of the [btrpa-scan](https://github.com/hackingdave/btrpa-scan) Python tool. It SHOULD (_once all bugs are found and worked out_):
 
-1. **Scans for Bluetooth devices** - Finds all BLE devices broadcasting near you
-2. **Searches for specific devices** - Hunt for a device by its MAC address
-3. **Resolves hidden addresses** - Some Bluetooth devices use "Resolvable Private Addresses" (RPAs) that change randomly. If you have the device's secret key (called an IRK), this app can identify those devices
-4. **Have some issues** - This is the first release and it's in alpha right now, but I'm happy to release early and let you guys make things better. Full Disclosure: This relies heavily on vibrator code from Claude (Opus 4.5).
+1. **Scan for Bluetooth devices** - Finds all BLE devices broadcasting near you
+2. **Search for specific devices** - Hunt for a device by its MAC address
+3. **Resolve hidden addresses** - Some Bluetooth devices use "Resolvable Private Addresses" (RPAs) that change randomly. If you have the device's secret key (called an IRK), this app can identify those devices
+4. **Have occasional issues** - This is the first release and it's in alpha right now, but I'm happy to release early and let you guys make things better. _Full Disclosure: This relies heavily on vibrator code from Claude (Opus 4.5)._
 
 ---
 
@@ -315,7 +310,7 @@ Output: `app/build/outputs/apk/release/app-release.apk`
 ## Credits
 
 - **Original Tool**: [btrpa-scan](https://github.com/hackingdave/btrpa-scan)
-- **Original Author**: David Kennedy (@HackingDave)
-- **Company**: TrustedSec
-- **Android Port**: Not Dan (@notdan)
+- **Original Author**: David Kennedy [@HackingDave](https://x.com/@HackingDave)
+- **Company**: [TrustedSec](https://trustedsec.com)
+- **Android Port**: Not Dan [@notdan](https://x.com/notdan)
 - **Company**: PACKET.TEL
