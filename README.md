@@ -13,8 +13,9 @@ This app is an **Android version** of the [btrpa-scan](https://github.com/hackin
 3. **Resolve hidden addresses** - Some Bluetooth devices use "Resolvable Private Addresses" (RPAs) that change randomly. If you have the device's secret key (called an IRK), this app can identify those devices
 4. **Have occasional issues** - This is the first release and it's in alpha right now, but I'm happy to release early and let you guys make things better. _Full Disclosure: This relies heavily on vibrator code from Claude (Opus 4.5)._
 
-If you're itching to just GIT GUD grab the APK here. I signed it with my own hooves: [https://github.com/scramblr/btrpa-scan-android/releases](https://github.com/scramblr/btrpa-scan-android/releases)
-I'll be releasing it for the official Google Play Store once they decide my 5 year old company is real or whatever they're doing. iOS users: hold ur breath, a version is coming! keeeeeeeeep holding!! 
+### 🚨 If you're itching to just GIT NEKKID IMMEDIATELY, grab the APK for your phone here. I even signed it with my own hooves: [https://github.com/scramblr/btrpa-scan-android/releases](https://github.com/scramblr/btrpa-scan-android/releases) 🚨 ###
+
+#### I'll be releasing it for the official Google Play Store once they decide my 5 year old company is real or whatever they're doing. iOS users: hold ur breath, a version is coming! keeeeeeeeep holding!! ####
 ---
 
 ## What's In This Project?
@@ -59,10 +60,11 @@ btrpa-scan-android/
 
 ---
 
-### Step 1: Extract the Zip File or Clone the Repo
+### Step 1: Extract the Zip File, Clone the Repo, or Download the APK from Releases.
 
 - Download `btrpa-scan-android.zip` or clone this Repo.
 - By default it should be called `btrpa-scan-android`
+- Oh, yeah I guess you could just download the finished product from the Releases section on the right side of the screen [or right here](https://github.com/scramblr/btrpa-scan-android/releases).
 
 ---
 
