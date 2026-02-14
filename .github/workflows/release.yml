@@ -1,0 +1,56 @@
+name: Build & Upload APK to Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - uses: gradle/actions/setup-gradle@v3
+
+      - run: chmod +x ./gradlew
+
+      - name: Assemble Release
+        run: ./gradlew --no-daemon :app:assembleRelease
+
+      # Extract versionName from Gradle
+      - name: Extract versionName
+        id: version
+        run: |
+          VERSION=$(grep versionName app/build.gradle.kts | head -1 | sed -E 's/.*"(.+)".*/\1/')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      # Rename APK to desired format
+      - name: Rename APK
+        run: |
+          APK_PATH=$(ls app/build/outputs/apk/release/*.apk | head -1)
+          NEW_NAME="scramblr-btrpa-scan_v${{ steps.version.outputs.version }}.apk"
+          mv "$APK_PATH" "$NEW_NAME"
+          echo "apk_name=$NEW_NAME" >> $GITHUB_OUTPUT
+        id: rename
+
+      # Create GitHub Release + upload renamed APK
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: true
+          files: ${{ steps.rename.outputs.apk_name }}
