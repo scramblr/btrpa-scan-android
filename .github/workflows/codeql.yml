@@ -1,0 +1,42 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: "17 3 * * 1"  # weekly
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze (CodeQL)
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: java-kotlin
+          build-mode: manual
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - uses: gradle/actions/setup-gradle@v3
+
+      - run: chmod +x ./gradlew
+      - name: Build for CodeQL
+        run: ./gradlew --no-daemon :app:assembleDebug
+
+      - uses: github/codeql-action/analyze@v3
