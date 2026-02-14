@@ -313,4 +313,4 @@ Output: `app/build/outputs/apk/release/app-release.apk`
 - **Original Author**: David Kennedy [@HackingDave](https://x.com/@HackingDave)
 - **Company**: [TrustedSec](https://trustedsec.com)
 - **Android Port**: Not Dan [@notdan](https://x.com/notdan)
-- **Company**: PACKET.TEL
+- **Company**: [PACKET.TEL](https://packet.tel)
