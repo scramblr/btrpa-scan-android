@@ -6,6 +6,13 @@ on:
   pull_request:
     branches: [ master ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build (${{ matrix.os }})
@@ -32,7 +39,7 @@ jobs:
         if: runner.os != 'Windows'
         run: chmod +x ./gradlew
 
-      # Fast “does it build here?” check on every OS
+      # Fast “does it build?” on every OS
       - name: Assemble Debug (non-Windows)
         if: runner.os != 'Windows'
         run: ./gradlew --no-daemon :app:assembleDebug
@@ -41,7 +48,7 @@ jobs:
         if: runner.os == 'Windows'
         run: .\gradlew.bat --no-daemon :app:assembleDebug
 
-      # Full checks only once (Linux)
+      # Full checks once (Linux)
       - name: Unit tests + lint (Linux only)
         if: runner.os == 'Linux'
         run: ./gradlew --no-daemon :app:testDebugUnitTest :app:lintDebug
