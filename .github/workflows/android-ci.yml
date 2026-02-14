@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build + unit tests (${{ matrix.os }})
+    name: Build (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -25,7 +25,6 @@ jobs:
           java-version: "17"
           cache: gradle
 
-      # Optional but recommended: better Gradle caching/telemetry handling
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
 
@@ -33,10 +32,23 @@ jobs:
         if: runner.os != 'Windows'
         run: chmod +x ./gradlew
 
-      - name: Build + unit tests (non-Windows)
+      # Fast “does it build here?” check on every OS
+      - name: Assemble Debug (non-Windows)
         if: runner.os != 'Windows'
-        run: ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+        run: ./gradlew --no-daemon :app:assembleDebug
 
-      - name: Build + unit tests (Windows)
+      - name: Assemble Debug (Windows)
         if: runner.os == 'Windows'
-        run: .\gradlew.bat --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+        run: .\gradlew.bat --no-daemon :app:assembleDebug
+
+      # Full checks only once (Linux)
+      - name: Unit tests + lint (Linux only)
+        if: runner.os == 'Linux'
+        run: ./gradlew --no-daemon :app:testDebugUnitTest :app:lintDebug
+
+      - name: Upload APK artifacts (Linux only)
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: apks
+          path: app/build/outputs/apk/debug/*.apk
